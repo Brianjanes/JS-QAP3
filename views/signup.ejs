@@ -1,5 +1,8 @@
 <%- include('partials/header', { title: "Sign Up" }) %>
 <h1>Sign Up</h1>
+<% if (errorMessage) { %>
+<p class="error-message"><%= errorMessage %></p>
+<% } %>
 <form action="/signup" method="POST">
   <div class="form-input-container">
     <label for="email">Email:</label>

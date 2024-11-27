@@ -1,23 +1,31 @@
 <%- include('partials/header', { title: "Landing" }) %>
 <main class="main-content">
   <h1>User Dashboard</h1>
-  <p>This is your personal dashboard where you can view exclusive content.</p>
+  <h1>Welcome, <%= user.username %>!</h1>
 
-  <!-- Protected content -->
-  <div class="dashboard-content">
-    <h3>Your Recent Activity</h3>
+  <% if (isAdmin) { %>
+  <h2>All Users</h2>
+  <table border="1">
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
+    <% users.forEach(function(user) { %>
+    <tr>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+      <td><%= user.role %></td>
+    </tr>
+    <% }); %>
+  </table>
+  <% } else { %>
+  <p>Your role: <%= user.role %></p>
+  <% } %>
 
-    <ul>
-      <li>Completed task: Profile update</li>
-      <li>Viewed course: Introduction to Node.js</li>
-      <li>Completed task: Security training</li>
-      <li>Submitted project: JavaScript Quiz App</li>
-    </ul>
-
-    <form action="/logout" method="post">
-      <button type="submit">Logout</button>
-    </form>
-  </div>
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
 </main>
 
 <%- include('partials/footer') %>

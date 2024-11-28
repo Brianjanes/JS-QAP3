@@ -80,6 +80,148 @@ button {
   background: #ffffff;
   color: #4a6cf7;
   border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Styles */
+table {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Link Styles */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+/* Index Page Specific */
+.index-button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.index-button-container button {
+  width: auto;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.landing-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+=======
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 4px solid #ff3333;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+/* Form Styles */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-input-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Button Styles */
+button {
+  background: #ffffff;
+  color: #4a6cf7;
+  border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 6px;
   font-size: 1rem;
@@ -155,8 +297,6 @@ form[action="/logout"] button {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   border: 2px solid #ffffff;
-  margin-top: 2rem;
-  width: auto;
 }
 
 form[action="/logout"] button:hover {

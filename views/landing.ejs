@@ -1,31 +1,32 @@
 <%- include('partials/header', { title: "Landing" }) %>
-<main class="main-content">
-  <h1>User Dashboard</h1>
-  <h1>Welcome, <%= user.username %>!</h1>
 
-  <% if (isAdmin) { %>
-  <h2>All Users</h2>
-  <table border="1">
-    <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Role</th>
-    </tr>
-    <% users.forEach(function(user) { %>
-    <tr>
-      <td><%= user.username %></td>
-      <td><%= user.email %></td>
-      <td><%= user.role %></td>
-    </tr>
-    <% }); %>
-  </table>
-  <% } else { %>
-  <p>Your role: <%= user.role %></p>
-  <% } %>
+<h1>User Dashboard</h1>
+<h1>Welcome, <%= user.username %>!</h1>
 
+<% if (isAdmin) { %>
+<h2>All Users</h2>
+<table border="1">
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Role</th>
+  </tr>
+  <% users.forEach(function(user) { %>
+  <tr>
+    <td><%= user.username %></td>
+    <td><%= user.email %></td>
+    <td><%= user.role %></td>
+  </tr>
+  <% }); %>
+</table>
+<% } else { %>
+<h3>Your role: <%= user.role %></h3>
+<% } %>
+
+<span class="landing-button-container">
   <form action="/logout" method="POST">
     <button type="submit">Logout</button>
   </form>
-</main>
+</span>
 
 <%- include('partials/footer') %>

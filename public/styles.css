@@ -80,14 +80,13 @@ button {
   background: #ffffff;
   color: #4a6cf7;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  margin-top: 1rem;
 }
 
 button:hover {
@@ -150,13 +149,18 @@ a:hover {
   padding: 1rem 2rem;
 }
 
+.landing-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
 /* Logout Button */
 form[action="/logout"] button {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   border: 2px solid #ffffff;
-  margin-top: 2rem;
-  width: auto;
 }
 
 form[action="/logout"] button:hover {
